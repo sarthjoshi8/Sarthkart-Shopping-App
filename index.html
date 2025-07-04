@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sarth'kart - Your Comprehensive Online Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Index Page -->
+    <div class="index-page" id="index-page">
+        <!-- <div class="splash-container">
+            <div class="splash-logo">Sarth'kart</div>
+            <div class="splash-tagline">Your Ultimate Online Shopping Experience</div>
+            <div class="loading-bar" id="loadingBar"></div>
+            <div class="progress-text" id="progressText">Loading...</div>
+            <button class="splash-enter-btn" id="enterBtn" style="display:none;">Enter Site</button>
+        </div> -->
+    </div>
+
+    <!-- Main Site Content -->
+    <div id="main-site" style="display:none;">
+        <header>
+            <div class="logo">Sarth'kart</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#products" onclick="showPage('products')">Products</a></li>
+                    <li><a href="#about" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+                    <li>
+                        <a href="#cart" class="cart-icon" onclick="showPage('cart')">
+                            🛒 Cart 
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Home Page -->
+        <div id="home-page" class="page">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>Your One-Stop Online Shopping Destination</h1>
+                    <p>Discover an unparalleled shopping experience with Sarth'kart. Explore thousands of products across multiple categories, all at your fingertips.</p>
+                    <a href="#products" class="hero-cta" onclick="showPage('products')">Shop Now</a>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <img src="./fast shipping.png" alt="Fast Shipping">
+                    <h3>Fast Shipping</h3>
+                    <p>Get your products delivered quickly and efficiently.</p>
+                </div>
+                <div class="feature">
+                    <img src="./quality.jpg" alt="Quality Guarantee" style="width: 100px; height: 100px;">
+                    <h3>Quality Guarantee</h3>
+                    <p>We ensure top-notch products from trusted sellers.</p>
+                </div>
+                <div class="feature">
+                    <img src="./easy return.jpg" alt="Easy Returns" style="width: auto;">
+                    <h3>Easy Returns</h3>
+                    <p>Hassle-free returns and customer-friendly policies.</p>
+                </div>
+            </section>
+
+            <section class="featured-categories">
+                <h2 style="text-align: center; margin-bottom: 30px;">Popular Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item" onclick="showPage('products'); displayProducts('electronics')">
+                        <img src="./electronics.jpg" alt="Electronics">
+                        <div class="category-item-content">
+                            <h3>Electronics</h3>
+                            <p>Latest gadgets and tech</p>
+                        </div>
+                    </div>
+                    <div class="category-item" onclick="showPage('products'); displayProducts('home-kitchen')">
+                        <img src="./homeandkitchen.jpg" alt="Home & Kitchen">
+                        <div class="category-item-content">
+                            <h3>Home & Kitchen</h3>
+                            <p>Essential home products</p>
+                        </div>
+                    </div>
+                    <div class="category-item" onclick="showPage('products'); displayProducts('clothing')">
+                        <img src="./clothing.jpg" alt="Clothing">
+                        <div class="category-item-content">
+                            <h3>Clothing</h3>
+                            <p>Fashion for every style</p>
+                        </div>
+                    </div>
+                    <div class="category-item" onclick="showPage('products'); displayProducts('beauty')">
+                        <img src="./beauty.png" alt="Beauty">
+                        <div class="category-item-content">
+                            <h3>Beauty</h3>
+                            <p>Skincare and cosmetics</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Products Page -->
+        <div id="products-page" class="page container">
+            <h1>Our Product Categories</h1>
+            <div class="category-buttons">
+                <button onclick="displayProducts('electronics')" class="btn">Electronics</button>
+                <button onclick="displayProducts('home-kitchen')" class="btn">Home & Kitchen</button>
+                <button onclick="displayProducts('clothing')" class="btn">Clothing</button>
+                <button onclick="displayProducts('books')" class="btn">Books</button>
+                <button onclick="displayProducts('sports')" class="btn">Sports & Outdoors</button>
+                <button onclick="displayProducts('beauty')" class="btn">Beauty & Personal Care</button>
+            </div>
+
+            <div id="product-section" class="product-grid">
+                
+            </div>
+        </div>
+
+        <!-- About Us Page -->
+        <div id="about-page" class="page container">
+            <h1>About Sarth'kart</h1>
+            <section>
+                <h2>Our Story</h2>
+                <p>Founded by Mr Sarth Joshi in 2025, Sarth'kart began with a simple mission: to revolutionize online shopping by creating a seamless, user-friendly platform that connects customers with high-quality products from around the world.</p>
+                <img style="width: 250px ;height:250px;" src="./sarth2.png" alt="sarth2">
+            </section>
+
+            <section>
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Customer Satisfaction: We prioritize your shopping experience above all else.</li>
+                    <li>Quality Assurance: We carefully curate our product selections to ensure top-notch quality.</li>
+                    <li>Innovation: Continuously improving our platform to make shopping easier and more enjoyable.</li>
+                    <li>Sustainability: Committed to environmentally responsible practices.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Our Team</h2>
+                <p>Sarth'kart is powered by a passionate team of e-commerce experts, tech innovators, and customer service professionals dedicated to delivering an exceptional online shopping experience.</p>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page container">
+            <h1>Contact Sarth'kart</h1>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone Number">
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h2>Customer Support</h2>
+                <p>Email: support@Sarth'kart.com</p>
+                <p>Phone: +91 0987655312</p>
+                <p>Address: 123 E-Commerce Street, VIT Vellore Tamil Nadu</p>
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cart-page" class="page container">
+            <h1>Your Shopping Cart</h1>
+            <div id="cart-list"></div>
+            <div id="cart-total">Total: $0</div>
+            <button onclick="checkout()" class="btn">Checkout</button>
+        </div>
+    </div>
+     <!-- Footer (Same as previous pages) -->
+     <footer class="bg-blue-700 text-white py-8 mt-12">
+        <div class="footer">
+            <p>&copy; 2025 Sarth'kart. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
